@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODEL DEPLOYMENT PROJECT</title>
+</head>
+<body>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size:50px">Wine-Quality Prediction</h1>
+            <h3 style="font-family:Papyrus">Predict wine quality according to the features.</h3>
+      </div>
+    </div>
+     <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .hero-image {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/carback.jpg');
+          height: 50%;
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+        .hero-text {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+        }
+    </style>
+
+    <div style="color:	rgb(255, 219, 88)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2><em>Please specify WINE features: </em></h2>
+            <body style="">
+               <img src="static\wine_image.jpg" alt="Trulli" width="500" height="333",class="center">
+               <h1 style="color:black"> </h1>
+               <div>
+               <form action="/result" method="post">
+                   <input style="font-style: italic; background-color:LightGray;" type="text" name="fixedAcidity" placeholder="Fixed Acidity" required="required" /></br>
+                   <input style="font-style: italic; background-color:Aqua;" type="text" name="volatileAcidity" placeholder="Volatile Acidity " required="required" /></br>
+                   <input style="font-style: italic; background-color:Orange;" type="text" name="citricAcid" placeholder="Citric Acid" required="required" /></br>
+                   <input style="font-style: italic; background-color:DodgerBlue;" type="text" name="residualSugar" placeholder="Residual Sugar " required="required" /></br>
+                   <input style="font-style: italic; background-color:MediumSeaGreen;" type="text" name="chlorides" placeholder="Chlorides " required="required" /></br>
+                   <input style="font-style: italic; background-color:LightGray;" type="text" name="freeSulfurDioxide" placeholder="Free Sulfur dioxide" required="required" /></br>
+                   <input style="font-style: italic; background-color:LightBlue;" type="text" name="totalSulfurDioxide" placeholder="Total Sulfur dioxide" required="required" /></br>
+                   <input style="font-style: italic; background-color:Violet;" type="text" name="density" placeholder="Density" required="required" /></br>
+                   <input style="font-style: italic; background-color:Pink;" type="text" name="pH" placeholder="pH  " required="required" /></br>
+                   <input style="font-style: italic; background-color:Azure;" type="text" name="sulphates" placeholder="Sulphates" required="required" /></br>
+                   <input style="font-style: italic; background-color:Crimson;" type="text" name="alcohol" placeholder="Alcohol" required="required" /></br>
+                   <br>
+                   <br>
+                   <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                  </form>
+             </div>
+          </body>
+        </form>
+        <br><br><h3>
+    </div>
+    <style>
+	body {
+            background-color: #282828;
+            text-align: center;
+            padding: 0px;
+	    font-family: cursive;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 200px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            text-align: center;
+            background-color: rgb(1, 54, 48);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: #FFD700;
+        }
+
+        #research {
+            width: 150px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: #FFD700;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: #FFD700;
+        }
+
+        #sub {
+            background-color: #f78205;
+            font-family:'Courier New', monospace;
+            font-weight: bold;
+            width: 180px;
+            height: 60px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 18px;
+            color: white;
+        }
+
+        #sub:hover {
+            background-color: #cf1804;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
